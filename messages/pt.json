@@ -1,0 +1,51 @@
+{
+  "Metadata": {
+    "title": "Caio Marques | Engenheiro de Software Pleno",
+    "description": "Desenvolvedor Fullstack especializado em React, Angular, NodeJs e Integração de LLMs."
+  },
+  "Navigation": {
+    "home": "Página Principal",
+    "articles": "Artigos",
+    "about": "Sobre",
+    "stack": "Stacks",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "Hero": {
+    "greeting": "Sistema Online. Identidade Verificada.",
+    "name": "Caio Marques",
+    "role": "Engenheiro de Software",
+    "sub_role": "Fullstack Focado em Frontend e Interfaces Deslumbrantes",
+    "description": "Transformando conceitos complexos em interfaces visuais deslumbrantes. Especialista Fullstack com foco obsessivo em Frontend de alto impacto e experiência do usuário.",
+    "cta": "Explorar Protocolos"
+  },
+  "Stack": {
+    "title": "Arquitetura Central",
+    "subtitle": "Tecnologias de Alta Performance"
+  },
+  "Projects": {
+    "title": "Logs de Missão",
+    "subtitle": "Sistemas Implantados",
+    "precision_proof": {
+      "title": "Precision Proof Systems",
+      "description": "Liderança técnica no desenvolvimento de uma suíte industrial de validação de provas digitais. Implementei algoritmos de comparação de imagem pixel-perfect e fluxos de aprovação complexos. Redução de 40% no tempo de QA manual através de automação e interfaces reativas otimizadas. Arquitetura resiliente baseada em React e Node.js para suportar cargas intensivas de processamento de imagem.",
+      "tags": ["React", "TypeScript", "React Hooks", "NodeJs", "Express", "PostgreSQL", "TypeORM"]
+    },
+    "evot": {
+      "title": "Evot Software",
+      "description": "Desenvolvimento fullstack de ERPs modulares para grandes corporações. Engenharei microsserviços em .NET Core para gestão de estoque e faturamento, integrados a um frontend Angular de alta performance. Implementação de padrões CQRS e Event Sourcing para garantir consistência de dados em ambientes distribuídos e de alta concorrência.",
+      "tags": ["Angular", ".NET", "C#", "SQL", "NestJs", "TypeORM"]
+    },
+    "ai_lab": {
+      "title": "Laboratório de IA Generativa",
+      "description": "Iniciativa de P&D focada na integração de LLMs em fluxos de trabalho tradicionais. Desenvolvimento de agentes autônomos utilizando a API Gemini Pro para análise semântica de documentos e geração de código assistida. Criação de interfaces conversacionais avançadas com streaming responses e manutenção de contexto de longa duração.",
+      "tags": ["Gemini API", "Next.js", "IA", "LLM"]
+    }
+  },
+  "Contact": {
+    "title": "Canal Criptografado",
+    "description": "Aberto para colaborações de alto impacto.",
+    "email_label": "Link Seguro",
+    "copy": "Copiar Endereço"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "Metadata": {
+    "title": "Caio Marques | Mid-Level Software Engineer",
+    "description": "Fullstack Developer specializing in React, Angular, Node.js and LLM Integration."
+  },
+  "Navigation": {
+    "home": "Main Page",
+    "articles": "Articles",
+    "about": "About",
+    "stack": "Stacks",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "greeting": "System Online. Identity Verified.",
+    "name": "Caio Marques",
+    "role": "Software Engineer",
+    "sub_role": "Fullstack Focused on Frontend & Stunning Interfaces",
+    "description": "Transforming complex concepts into stunning visual interfaces. Fullstack Specialist with obsessive focus on high-impact Frontend and User Experience.",
+    "cta": "Explore Protocols"
+  },
+  "Stack": {
+    "title": "Core Architecture",
+    "subtitle": "High-Performance Technologies"
+  },
+  "Projects": {
+    "title": "Mission Logs",
+    "subtitle": "Deployed Systems",
+    "precision_proof": {
+      "title": "Precision Proof Systems",
+      "description": "Technical leadership in developing an industrial digital proofing validation suite. Implemented pixel-perfect image comparison algorithms and complex approval workflows. Achieved 40% reduction in manual QA time through automation and reactive interfaces. Resilient architecture based on React and Node.js to support intensive image processing loads.",
+      "tags": ["React", "TypeScript", "React Hooks", "Node.js", "Express", "PostgreSQL", "TypeORM"]
+    },
+    "evot": {
+      "title": "Evot Software",
+      "description": "Fullstack development of modular ERPs for large corporations. Engineered .NET Core microservices for inventory management and billing, integrated with a high-performance Angular frontend. Implemented CQRS and Event Sourcing patterns to ensure data consistency in distributed, high-concurrency environments.",
+      "tags": ["Angular", ".NET", "C#", "SQL", "NestJS", "TypeORM"]
+    },
+    "ai_lab": {
+      "title": "Generative AI Lab",
+      "description": "R&D initiative focused on integrating LLMs into traditional workflows. Developed autonomous agents using Gemini Pro API for semantic document analysis and assisted code generation. Created advanced conversational interfaces with streaming responses and long-duration context maintenance.",
+      "tags": ["Gemini API", "Next.js", "AI", "LLM"]
+    }
+  },
+  "Contact": {
+    "title": "Encrypted Channel",
+    "description": "Open for high-impact collaborations.",
+    "email_label": "Secure Link",
+    "copy": "Copy Address"
+  }
+}
