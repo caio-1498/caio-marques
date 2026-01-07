@@ -2,6 +2,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"; // Correct import for 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import "../globals.css";
+
 import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -33,11 +34,14 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale} className="dark">
-            <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased bg-cyber-dark text-cyber-text selection:bg-cyber-primary selection:text-black`}>
+            <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased text-cyber-text selection:bg-cyber-primary selection:text-black`}>
                 <NextIntlClientProvider messages={messages}>
                     <div className="relative min-h-screen overflow-x-hidden">
-                        {/* Background Grid Pattern could go here */}
-                        {children}
+                        <div className="fixed inset-0 bg-cyber-dark z-[-2]" />
+
+                        <div className="relative z-10">
+                            {children}
+                        </div>
                     </div>
                 </NextIntlClientProvider>
             </body>

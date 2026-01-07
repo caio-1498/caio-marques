@@ -16,8 +16,7 @@ export const Hero = () => {
     return (
         <section className="min-h-screen flex flex-col justify-center items-start container mx-auto px-6 py-24 relative overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-cyber-primary/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-cyber-secondary/5 blur-[120px] rounded-full pointer-events-none" />
+
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -25,7 +24,7 @@ export const Hero = () => {
                 transition={{ duration: 0.8 }}
                 className="mb-6"
             >
-                <span className="text-cyber-primary font-mono text-xs md:text-sm tracking-[0.2em] uppercase border border-cyber-primary/30 px-4 py-2 rounded-none bg-cyber-primary/5 backdrop-blur-sm">
+                <span className="text-cyber-primary font-mono text-xs md:text-sm tracking-[0.2em] uppercase">
                     {t('greeting')}
                 </span>
             </motion.div>
