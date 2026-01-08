@@ -2,6 +2,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"; // Correct import for 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import "../globals.css";
+import BackgroundHome from "@/components/BackgroundHome";
 
 import { Metadata } from "next";
 
@@ -37,10 +38,11 @@ export default async function LocaleLayout({
             <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased text-cyber-text selection:bg-cyber-primary selection:text-black`}>
                 <NextIntlClientProvider messages={messages}>
                     <div className="relative min-h-screen overflow-x-hidden">
-                        <div className="fixed inset-0 bg-cyber-dark z-[-2]" />
-
-                        <div className="relative z-10">
-                            {children}
+                        <BackgroundHome />
+                        <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
+                            <div className="pointer-events-auto flex-grow">
+                                {children}
+                            </div>
                         </div>
                     </div>
                 </NextIntlClientProvider>
