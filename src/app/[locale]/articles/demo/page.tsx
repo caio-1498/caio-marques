@@ -1,5 +1,5 @@
 import ArticleFrame from "@/components/ArticleFrame";
-import { Link } from "@/i18n/routing";
+import Link from 'next/link';
 
 export default function ArticleDemo() {
     return (
