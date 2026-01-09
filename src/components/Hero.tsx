@@ -1,81 +1,74 @@
 "use client";
 import { useTranslations } from 'next-intl';
-import { DecryptedText } from './ui/DecryptedText';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import ProfileCard from './ProfileCard';
 
 export const Hero = () => {
     const t = useTranslations('Hero');
-    const tNav = useTranslations('Navigation');
-
-    const scrollTo = (id: string) => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-    };
 
     return (
-        <section className="min-h-screen flex flex-col justify-center items-start container mx-auto px-6 py-24 relative overflow-hidden">
-            {/* Background Elements */}
+        <section className="min-h-screen container mx-auto px-6 py-24 lg:py-0 flex flex-col justify-center relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="mb-6"
-            >
-                <span className="text-cyber-primary font-mono text-xs md:text-sm tracking-[0.2em] uppercase">
-                    {t('greeting')}
-                </span>
-            </motion.div>
-
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tighter text-white">
-                <DecryptedText text={t('name')} speed={50} className="block" />
-            </h1>
-
-            <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1, duration: 0.8 }}
-                className="text-xl md:text-3xl text-cyber-secondary font-mono mb-8"
-            >
-                {t('role')} <span className="text-cyber-accent mx-2">//</span> <span className="text-gray-300">{t('sub_role')}</span>
-            </motion.h2>
-
-            <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 0.8 }}
-                className="max-w-2xl text-base md:text-lg text-gray-400 mb-12 leading-relaxed border-l-2 border-cyber-primary/30 pl-6"
-            >
-                {t('description')}
-            </motion.p>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2, duration: 0.8 }}
-                className="flex flex-wrap gap-4"
-            >
-                <button
-                    className="group relative px-8 py-4 bg-transparent border border-cyber-primary text-cyber-primary font-bold text-lg rounded-none hover:bg-cyber-primary hover:text-black transition-all duration-300 cursor-pointer"
-                    onClick={() => scrollTo('projects')}
+                {/* Left Column: Text & Intro */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col items-start text-left space-y-8"
                 >
-                    <span className="flex items-center gap-2">
-                        {t('cta')} <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                    </span>
-                </button>
+                    <div>
+                        <h1 className="text-5xl lg:text-7xl font-black text-white mb-4 tracking-tighter">
+                            {t('name')}
+                        </h1>
+                        <h2 className="text-xl lg:text-2xl text-cyber-primary font-mono bg-cyber-primary/10 px-4 py-2 rounded inline-block">
+                            {t('badge')}
+                        </h2>
+                    </div>
 
-                <button onClick={() => scrollTo('stack')} className="px-6 py-4 border border-cyber-border text-gray-400 hover:text-white hover:border-cyber-primary/50 transition-all duration-300 cursor-pointer font-mono uppercase text-sm tracking-wider">
-                    {tNav('stack')}
-                </button>
-                <button onClick={() => scrollTo('projects')} className="px-6 py-4 border border-cyber-border text-gray-400 hover:text-white hover:border-cyber-primary/50 transition-all duration-300 cursor-pointer font-mono uppercase text-sm tracking-wider">
-                    {tNav('projects')}
-                </button>
-                <button onClick={() => scrollTo('contact')} className="px-6 py-4 border border-cyber-border text-gray-400 hover:text-white hover:border-cyber-primary/50 transition-all duration-300 cursor-pointer font-mono uppercase text-sm tracking-wider">
-                    {tNav('contact')}
-                </button>
-            </motion.div>
+                    <p className="text-lg text-gray-400 max-w-lg leading-relaxed">
+                        {t('description')}
+                    </p>
+
+                    <div className="flex flex-wrap gap-4 pt-4">
+                        <button
+                            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="bg-white text-black px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-gray-200"
+                        >
+                            {t('cta_projects')}
+                        </button>
+                        <button
+                            onClick={() => document.getElementById('stack')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="bg-white text-black px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-gray-200"
+                        >
+                            {t('cta_stacks')}
+                        </button>
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="bg-white text-black px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-gray-200"
+                        >
+                            {t('cta_contact')}
+                        </button>
+                    </div>
+                </motion.div>
+
+                {/* Right Column: Profile Card (Tilt) */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="flex justify-center lg:justify-end py-12 lg:py-0 relative"
+                >
+                    <ProfileCard
+                        name={t('name')}
+                        title={t('role')}
+                        handle="dev.psy"
+                        status="Available"
+                        avatarUrl="/images/profile-caio.png"
+                    />
+                </motion.div>
+
+            </div>
         </section>
     )
 }

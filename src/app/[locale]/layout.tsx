@@ -23,6 +23,8 @@ export async function generateMetadata({
     };
 }
 
+import BackButton from "@/components/BackButton";
+
 export default async function LocaleLayout({
     children,
     params
@@ -38,6 +40,7 @@ export default async function LocaleLayout({
             <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased text-cyber-text selection:bg-cyber-primary selection:text-black`}>
                 <NextIntlClientProvider messages={messages}>
                     <div className="relative min-h-screen overflow-x-hidden">
+                        <BackButton />
                         <BackgroundHome />
                         <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
                             <div className="pointer-events-auto flex-grow">

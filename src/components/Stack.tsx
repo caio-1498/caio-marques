@@ -7,7 +7,7 @@ export const Stack = () => {
     const t = useTranslations('Stack');
 
     return (
-        <section className="py-32 bg-cyber-dark relative" id="stack">
+        <section className="py-32 relative" id="stack">
             <div className="container mx-auto px-6">
                 <div className="mb-16 border-b border-cyber-muted pb-8">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -51,9 +51,9 @@ export const Stack = () => {
 
                     <SpotlightCard className="md:col-span-2">
                         <div className="flex flex-col h-full">
-                            <Database className="w-10 h-10 text-purple-400 mb-6" />
-                            <h3 className="text-xl font-bold mb-2 text-white">Data Engineering</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">SQL Server optimization, Entity Framework Core, and designing efficient schema for complex data relationships.</p>
+                            <Database className="w-10 h-10 text-orange-400 mb-6" />
+                            <h3 className="text-xl font-bold mb-2 text-white">Sanity Headless CMS</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">Building structured content platforms with Sanity.io. GROQ queries, real-time preview, and customizable content studios.</p>
                         </div>
                     </SpotlightCard>
                 </div>

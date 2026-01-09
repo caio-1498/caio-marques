@@ -12,12 +12,14 @@
     "contact": "Contact"
   },
   "Hero": {
-    "greeting": "System Online. Identity Verified.",
+    "greeting": "Hello, I am",
     "name": "Caio Marques",
-    "role": "Software Engineer",
-    "sub_role": "Fullstack Focused on Frontend & Stunning Interfaces",
-    "description": "Transforming complex concepts into stunning visual interfaces. Fullstack Specialist with obsessive focus on high-impact Frontend and User Experience.",
-    "cta": "Explore Protocols"
+    "role": "Mid-Level Software Engineer",
+    "badge": "Fullstack Developer | Frontend & LLM Integration",
+    "description": "I build digital experiences that blend high-performance engineering with immersive aesthetics. Turning complex problems into elegant, user-centric solutions.",
+    "cta_projects": "View Projects",
+    "cta_stacks": "Stacks",
+    "cta_contact": "Contact Me"
   },
   "Stack": {
     "title": "Core Architecture",
@@ -47,5 +49,11 @@
     "description": "Open for high-impact collaborations.",
     "email_label": "Secure Link",
     "copy": "Copy Address"
+  },
+  "About": {
+    "title": "About Me",
+    "intro": "I am a passionate software engineer dedicated to crafting exceptional digital experiences.",
+    "bio_p1": "With a strong background in fullstack development, I specialize in building scalable applications that not only function flawlessly but also look stunning.",
+    "bio_p2": "My journey involves constant learning and pushing the boundaries of what is possible on the web, exploring new technologies like AI and immersive 3D graphics."
   }
 }

@@ -12,12 +12,14 @@
     "contact": "Contato"
   },
   "Hero": {
-    "greeting": "Sistema Online. Identidade Verificada.",
+    "greeting": "Olá, eu sou",
     "name": "Caio Marques",
-    "role": "Engenheiro de Software",
-    "sub_role": "Fullstack Focado em Frontend e Interfaces Deslumbrantes",
-    "description": "Transformando conceitos complexos em interfaces visuais deslumbrantes. Especialista Fullstack com foco obsessivo em Frontend de alto impacto e experiência do usuário.",
-    "cta": "Explorar Protocolos"
+    "role": "Engenheiro de Software Pleno",
+    "badge": "Desenvolvedor Fullstack | Frontend e Integração de LLM",
+    "description": "Crio experiências digitais que unem engenharia de alta performance com estética imersiva. Transformando problemas complexos em soluções elegantes e centradas no usuário.",
+    "cta_projects": "Ver Projetos",
+    "cta_stacks": "Stacks",
+    "cta_contact": "Contato"
   },
   "Stack": {
     "title": "Arquitetura Central",
@@ -47,5 +49,11 @@
     "description": "Aberto para colaborações de alto impacto.",
     "email_label": "Link Seguro",
     "copy": "Copiar Endereço"
+  },
+  "About": {
+    "title": "Sobre Mim",
+    "intro": "Sou um engenheiro de software apaixonado, dedicado a criar experiências digitais excepcionais.",
+    "bio_p1": "Com um forte background em desenvolvimento fullstack, especializo-me em construir aplicações escaláveis que não apenas funcionam perfeitamente, mas também têm uma aparência deslumbrante.",
+    "bio_p2": "Minha jornada envolve aprendizado constante e expandir os limites do que é possível na web, explorando novas tecnologias como IA e gráficos 3D imersivos."
   }
 }
