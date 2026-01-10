@@ -1,10 +1,12 @@
 "use client";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ProfileCard from './ProfileCard';
 
 export const Hero = () => {
     const t = useTranslations('Hero');
+    const currentLocale = useLocale();
 
     return (
         <section className="min-h-screen container mx-auto px-6 py-24 lg:py-0 flex flex-col justify-center relative z-10">
@@ -49,6 +51,18 @@ export const Hero = () => {
                         >
                             {t('cta_contact')}
                         </button>
+                        <Link
+                            href={`/${currentLocale}/articles`}
+                            className="bg-transparent border border-white text-white px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-white/10"
+                        >
+                            {t('cta_articles')}
+                        </Link>
+                        <Link
+                            href={`/${currentLocale}/ia-content`}
+                            className="bg-transparent border border-white text-white px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-white/10"
+                        >
+                            {t('cta_ia_content')}
+                        </Link>
                     </div>
                 </motion.div>
 

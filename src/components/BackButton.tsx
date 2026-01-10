@@ -27,7 +27,7 @@ const BackButton = () => {
     return (
         <button
             onClick={() => router.back()}
-            className="fixed top-6 left-6 z-50 p-3 rounded-full bg-black/20 backdrop-blur-md border border-white/10 text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 group"
+            className="fixed top-6 left-6 z-50 p-3 rounded-full bg-black/20 backdrop-blur-md border border-white/10 text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 group cursor-pointer"
             aria-label="Go Back"
         >
             <ArrowLeft className="w-6 h-6 text-white/80 group-hover:text-white" />

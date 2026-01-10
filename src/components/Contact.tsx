@@ -45,7 +45,7 @@ export const Contact = () => {
                             className="w-full md:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-cyber-border text-gray-300 hover:text-white hover:border-cyber-primary hover:bg-cyber-primary/5 transition-colors duration-300 group cursor-pointer"
                         >
                             {copied ? <Check className="w-5 h-5 text-cyber-accent" /> : <Copy className="w-5 h-5 group-hover:text-cyber-primary" />}
-                            <span className="font-mono">{email}</span>
+                            <span className="font-mono text-xs md:text-base break-all">{email}</span>
                         </button>
 
                         <a

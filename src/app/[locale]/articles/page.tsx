@@ -1,19 +1,18 @@
-import { client } from "@/sanity/client";
+import { getTranslations } from 'next-intl/server';
 
-export default async function ArticlesIndex({
-    params
-}: {
-    params: Promise<{ locale: string }>
-}) {
-    // The layout now handles the sidebar (navigation) and the list of articles.
-    // The page.tsx is basically the "initial state" or "index" view.
-    // Since the sidebar is always present in layout, this main area can be a welcome screen or just empty until an article is selected.
+export default async function ArticlesIndex() {
+    const t = await getTranslations('Navigation');
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[50vh] text-center">
-            <h1 className="text-3xl font-bold text-white mb-4">Welcome to the Archive</h1>
-            <p className="text-gray-400 max-w-md">
-                Select an article from the navigation module on the left to begin reading.
+        <div className="flex flex-col items-center justify-center min-h-[50vh] text-center p-8">
+            <div className="w-16 h-16 border-2 border-dashed border-cyber-primary/50 rounded-full flex items-center justify-center mb-6 animate-pulse">
+                <div className="w-8 h-8 bg-cyber-primary/20 rounded-full" />
+            </div>
+            <h1 className="text-3xl font-bold text-white mb-4 tracking-tighter">
+                {t('under_development_title')}
+            </h1>
+            <p className="text-gray-400 max-w-md font-mono text-sm leading-relaxed">
+                {t('under_development_desc')}
             </p>
         </div>
     );

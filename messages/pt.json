@@ -9,51 +9,63 @@
     "about": "Sobre",
     "stack": "Stacks",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "ia_content": "Conteúdo IA",
+    "coming_soon": "Em breve",
+    "under_development_title": "Em Desenvolvimento",
+    "under_development_desc": "Esta seção está sendo construída. Volte em breve!"
   },
   "Hero": {
     "greeting": "Olá, eu sou",
     "name": "Caio Marques",
     "role": "Engenheiro de Software Pleno",
-    "badge": "Desenvolvedor Fullstack | Frontend e Integração de LLM",
-    "description": "Crio experiências digitais que unem engenharia de alta performance com estética imersiva. Transformando problemas complexos em soluções elegantes e centradas no usuário.",
+    "badge": "Desenvolvedor Fullstack | Especialização em Frontend",
+    "description": "Crio experiências digitais que unem engenharia de alta performance com estética imersiva e intuitiva. Transformando problemas complexos em soluções elegantes e centradas no usuário.",
     "cta_projects": "Ver Projetos",
     "cta_stacks": "Stacks",
-    "cta_contact": "Contato"
+    "cta_contact": "Contato",
+    "cta_articles": "Artigos",
+    "cta_ia_content": "Conteúdo IA"
   },
   "Stack": {
     "title": "Arquitetura Central",
     "subtitle": "Tecnologias de Alta Performance"
   },
   "Projects": {
-    "title": "Logs de Missão",
-    "subtitle": "Sistemas Implantados",
+    "this_portfolio": {
+      "title": "Portfólio criado em Janeiro de 2026, você está aqui!",
+      "description": "Criei este portólio explorando bem a minha criatividade para desenvolver interfaces elegantes e estudar tecnologias que me interessavam, além de reunir meus projetos trabalhados em um só lugar.",
+      "tags": ["Gemini", "Next.js", "Typescript", "Three.js", "Tailwind", "Sanity", "LLM", "Headless CMS", "Prompt Engeneering"]
+    },
+    "title": "Missões Concluídas",
+    "subtitle": "Sistemas",
     "precision_proof": {
       "title": "Precision Proof Systems",
-      "description": "Liderança técnica no desenvolvimento de uma suíte industrial de validação de provas digitais. Implementei algoritmos de comparação de imagem pixel-perfect e fluxos de aprovação complexos. Redução de 40% no tempo de QA manual através de automação e interfaces reativas otimizadas. Arquitetura resiliente baseada em React e Node.js para suportar cargas intensivas de processamento de imagem.",
-      "tags": ["React", "TypeScript", "React Hooks", "NodeJs", "Express", "PostgreSQL", "TypeORM"]
+      "description": "Desenvolvimento de uma versão de um software industrial de validação de embalagens utilizando computação visual e gestão das artes digitais para empresas de grande porte. Trabalhei com fluxos de aprovação complexos e seus progressos. Redução de 40% no tempo de QA manual através de automação e interfaces reativas otimizadas. Arquitetura resiliente baseada em React e Node.js para suportar cargas intensivas de processamento de imagem.",
+      "tags": ["React", "TypeScript", "React Hooks", "NodeJs", "Express", "Tailwind", "PostgreSQL", "TypeORM"]
     },
     "evot": {
       "title": "Evot Software",
-      "description": "Desenvolvimento fullstack de ERPs modulares para grandes corporações. Engenharei microsserviços em .NET Core para gestão de estoque e faturamento, integrados a um frontend Angular de alta performance. Implementação de padrões CQRS e Event Sourcing para garantir consistência de dados em ambientes distribuídos e de alta concorrência.",
-      "tags": ["Angular", ".NET", "C#", "SQL", "NestJs", "TypeORM"]
+      "description": "Desenvolvimento fullstack de softwares de gestão de frotas e passageiros em empresas de grande porte. Engenharia de interfaces que suportavam dados brutos e escaláveis intuitivamente. Manutenção de arquitetura DDD baseada em .NET Core para regras de negócios, frontend Angular 14+ de alta performance seguindo padrões arquiteturais. Desenvolvi também um sistema de controle de SCRUM para organização interna da empresa.",
+      "tags": ["Angular", ".NET", "C#", "SQL", "Bootstrap", "Angular Materials", "NestJs", "TypeORM"]
     },
     "ai_lab": {
-      "title": "Laboratório de IA Generativa",
-      "description": "Iniciativa de P&D focada na integração de LLMs em fluxos de trabalho tradicionais. Desenvolvimento de agentes autônomos utilizando a API Gemini Pro para análise semântica de documentos e geração de código assistida. Criação de interfaces conversacionais avançadas com streaming responses e manutenção de contexto de longa duração.",
-      "tags": ["Gemini API", "Next.js", "IA", "LLM"]
+      "title": "Pesquisas e graduções em LLMs e IA Generativa",
+      "description": "Cursos de graduação em NotebookLM e funcionamento geral das LLMs para facilitação da produção geral no projeto, abrangendo mais do que o desenvolvimento.",
+      "tags": ["Gemini API", "Next.js", "IA", "LLM", "API Routes", "NotebookLM", "Prompt Engeneering"]
     }
+ 
   },
   "Contact": {
-    "title": "Canal Criptografado",
-    "description": "Aberto para colaborações de alto impacto.",
+    "title": "Fale comigo",
+    "description": "Aberto para colaborações",
     "email_label": "Link Seguro",
     "copy": "Copiar Endereço"
   },
   "About": {
     "title": "Sobre Mim",
-    "intro": "Sou um engenheiro de software apaixonado, dedicado a criar experiências digitais excepcionais.",
-    "bio_p1": "Com um forte background em desenvolvimento fullstack, especializo-me em construir aplicações escaláveis que não apenas funcionam perfeitamente, mas também têm uma aparência deslumbrante.",
+    "intro": "Sou um engenheiro de software criado com as mãos em teclados, dedicado a criar experiências digitais excepcionais e inovadoras.",
+    "bio_p1": "Com background em desenvolvimento fullstack, especializo-me em construir aplicações escaláveis que não apenas funcionam perfeitamente, mas também têm uma aparência deslumbrante.",
     "bio_p2": "Minha jornada envolve aprendizado constante e expandir os limites do que é possível na web, explorando novas tecnologias como IA e gráficos 3D imersivos."
   }
 }

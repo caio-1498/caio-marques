@@ -7,7 +7,7 @@ export const Stack = () => {
     const t = useTranslations('Stack');
 
     return (
-        <section className="py-32 relative" id="stack">
+        <section className="py-16 relative" id="stack">
             <div className="container mx-auto px-6">
                 <div className="mb-16 border-b border-cyber-muted pb-8">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">

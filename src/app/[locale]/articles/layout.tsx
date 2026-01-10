@@ -63,7 +63,7 @@ export default async function ArticlesLayout({
     ];
 
     return (
-        <div className="min-h-screen grid grid-cols-1 lg:grid-cols-4 gap-0">
+        <div className="min-h-screen flex flex-col">
             {/* Dynamic Background (Global for Articles Route) */}
             <div className="fixed inset-0 z-[-1] bg-black">
                 <ParticlesBackground
@@ -77,17 +77,10 @@ export default async function ArticlesLayout({
                 />
             </div>
 
-            {/* Sidebar (1 Column) - Navigation */}
-            {/* Mobile: Static/Scrollable at top. Desktop: Sticky full height. */}
+            {/* Sidebar temporarily disabled for development
             <aside className="lg:col-span-1 border-b lg:border-b-0 lg:border-r border-white/20 bg-black/20 backdrop-blur-xl lg:sticky lg:top-0 lg:h-screen z-20 flex flex-col max-h-[50vh] lg:max-h-screen overflow-hidden">
                 <div className="flex-1 flex flex-col h-full relative">
-
-                    {/* Top Spacer / Back Button Clearance */}
-                    {/* Desktop: ~120px to sit under back button. Mobile: adequate padding. */}
                     <div className="h-24 lg:h-28 shrink-0"></div>
-
-
-                    {/* Pill Nav - Sticky Header within Sidebar */}
                     <div className="shrink-0 px-6 pb-2 z-30 bg-gradient-to-b from-transparent via-black/20 to-transparent lg:bg-none">
                         <PillNav
                             logo=""
@@ -101,20 +94,17 @@ export default async function ArticlesLayout({
                             className="!px-0 !justify-start"
                         />
                     </div>
-
-                    {/* Scrollable List Area */}
-                    {/* Gap is small (pb-2 above + pt-0 here implies small gap). */}
                     <div className="flex-1 overflow-hidden relative mt-2">
                         <ArticlesView articles={displayArticles} locale={locale} />
                     </div>
                 </div>
             </aside>
+            */}
 
-            {/* Content Area (3 Columns) - Reading */}
-            {/* Mobile: Pushed down by sidebar. Desktop: Right side. */}
-            <main className="lg:col-span-3 relative min-h-screen flex flex-col">
+            {/* Content Area (Full Width) */}
+            <main className="flex-1 relative min-h-screen flex flex-col items-center justify-center">
                 {/* Content Wrapper */}
-                <div className="relative z-10 flex-1 p-6 md:p-12 lg:p-24 flex justify-center">
+                <div className="relative z-10 flex-1 p-6 md:p-12 lg:p-24 flex justify-center items-center">
                     <div className="w-full max-w-4xl pt-12 lg:pt-0"> {/* Mobile: Add top padding if needed */}
                         {children}
                     </div>

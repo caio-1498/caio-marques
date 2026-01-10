@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { useRouter, usePathname } from 'next/navigation';
 
@@ -13,7 +13,12 @@ export const Navigation = () => {
     const pathname = usePathname();
 
     const [hidden, setHidden] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const { scrollY } = useScroll();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious() ?? 0;
@@ -25,6 +30,8 @@ export const Navigation = () => {
     });
 
     const switchLocale = (newLocale: string) => {
+        if (!mounted) return;
+
         // Basic locale switching logic for /en /pt
         // If path is /en, replace with /pt
         const segments = pathname.split('/');
@@ -66,12 +73,24 @@ export const Navigation = () => {
                             {t('home')}
                         </Link>
                         {/* Placeholder for Articles - creating route next */}
-                        <Link href={`/${currentLocale}/articles`} className="text-sm font-mono text-gray-400 hover:text-cyber-primary transition-colors uppercase tracking-widest cursor-pointer">
-                            {t('articles')}
-                        </Link>
-                        <Link href={`/${currentLocale}/ia-content`} className="text-sm font-mono text-gray-400 hover:text-cyber-primary transition-colors uppercase tracking-widest cursor-pointer">
-                            IA CONTENT
-                        </Link>
+                        {/* Disabled Links with Tooltip */}
+                        <div className="group relative flex items-center">
+                            <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
+                                {t('articles')}
+                            </span>
+                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
+                                {t('coming_soon')}
+                            </span>
+                        </div>
+
+                        <div className="group relative flex items-center">
+                            <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
+                                {t('ia_content')}
+                            </span>
+                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
+                                {t('coming_soon')}
+                            </span>
+                        </div>
                     </div>
 
                     <div className="h-4 w-px bg-cyber-border hidden md:block" />

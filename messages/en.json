@@ -9,7 +9,11 @@
     "about": "About",
     "stack": "Stacks",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ia_content": "AI Content",
+    "coming_soon": "Coming Soon",
+    "under_development_title": "Under Development",
+    "under_development_desc": "This section is currently being built. Check back soon!"
   },
   "Hero": {
     "greeting": "Hello, I am",
@@ -19,7 +23,9 @@
     "description": "I build digital experiences that blend high-performance engineering with immersive aesthetics. Turning complex problems into elegant, user-centric solutions.",
     "cta_projects": "View Projects",
     "cta_stacks": "Stacks",
-    "cta_contact": "Contact Me"
+    "cta_contact": "Contact Me",
+    "cta_articles": "Articles",
+    "cta_ia_content": "AI Content"
   },
   "Stack": {
     "title": "Core Architecture",
@@ -42,6 +48,11 @@
       "title": "Generative AI Lab",
       "description": "R&D initiative focused on integrating LLMs into traditional workflows. Developed autonomous agents using Gemini Pro API for semantic document analysis and assisted code generation. Created advanced conversational interfaces with streaming responses and long-duration context maintenance.",
       "tags": ["Gemini API", "Next.js", "AI", "LLM"]
+    },
+    "this_portfolio": {
+      "title": "Portfolio created in January 2026, you are here!",
+      "description": "I created this portfolio to fully explore my creativity in developing elegant interfaces and studying interesting technologies, while gathering all my projects in one central hub.",
+      "tags": ["Gemini", "Next.js", "TypeScript", "Three.js", "Tailwind", "Sanity", "LLM", "Headless CMS", "Prompt Engineering"]
     }
   },
   "Contact": {
