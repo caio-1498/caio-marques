@@ -69,6 +69,9 @@ export const Navigation = () => {
                         <Link href={`/${currentLocale}/articles`} className="text-sm font-mono text-gray-400 hover:text-cyber-primary transition-colors uppercase tracking-widest cursor-pointer">
                             {t('articles')}
                         </Link>
+                        <Link href={`/${currentLocale}/ia-content`} className="text-sm font-mono text-gray-400 hover:text-cyber-primary transition-colors uppercase tracking-widest cursor-pointer">
+                            IA CONTENT
+                        </Link>
                     </div>
 
                     <div className="h-4 w-px bg-cyber-border hidden md:block" />

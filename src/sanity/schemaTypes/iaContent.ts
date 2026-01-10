@@ -1,9 +1,9 @@
 
 import { defineField, defineType } from 'sanity'
 
-export const article = defineType({
-  name: 'article',
-  title: 'Article',
+export const iaContent = defineType({
+  name: 'iaContent',
+  title: 'IA Content',
   type: 'document',
   fields: [
     defineField({
@@ -26,8 +26,8 @@ export const article = defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
+      name: 'description',
+      title: 'Description',
       type: 'text',
       rows: 3,
     }),
