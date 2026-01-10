@@ -9,7 +9,7 @@ export const Projects = () => {
     const projects = [
         {
             id: "this_portfolio",
-            tech: ["Gemini", "Next.js", "TypeScript", "Three.js", "Tailwind", "Sanity", "LLM", "Headless CMS", "Prompt Engineering"],
+            tech: ["Gemini", "Next.js", "TypeScript", "Three.js", "Tailwind", "Payload CMS", "Postgres", "LLM", "Prompt Engineering"],
             color: "text-cyber-primary"
         },
         {

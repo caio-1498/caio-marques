@@ -2,7 +2,7 @@ import PillNav from '@/components/PillNav';
 import ArticlesView from '@/components/ArticlesView';
 import React from 'react';
 import ParticlesBackground from '@/components/ui/ParticlesBackground';
-import { client } from "@/sanity/client";
+// import { client } from "@/sanity/client";
 
 export default async function ArticlesLayout({
     children,
@@ -13,12 +13,14 @@ export default async function ArticlesLayout({
 }) {
     const { locale } = await params;
 
-    const query = `*[_type == "article"] | order(publishedAt desc) {
-        title,
-        "slug": slug.current,
-        publishedAt
-    }`;
-    const articles = await client.fetch(query);
+    // TODO: Payload Migration
+    // const query = `*[_type == "article"] | order(publishedAt desc) {
+    //     title,
+    //     "slug": slug.current,
+    //     publishedAt
+    // }`;
+    // const articles = await client.fetch(query);
+    const articles: any[] = [];
 
     // Mock Data for Visualization
     const mockArticles = [

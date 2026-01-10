@@ -3,10 +3,18 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ProfileCard from './ProfileCard';
+import CountUp from './ui/CountUp';
+import { getVisitorCount } from '@/actions/getVisitorCount';
+import { useState, useEffect } from 'react';
 
 export const Hero = () => {
     const t = useTranslations('Hero');
     const currentLocale = useLocale();
+    const [visitorCount, setVisitorCount] = useState<number | null>(null);
+
+    useEffect(() => {
+        getVisitorCount().then(props => setVisitorCount(props));
+    }, []);
 
     return (
         <section className="min-h-screen container mx-auto px-6 py-24 lg:py-0 flex flex-col justify-center relative z-10">
@@ -27,6 +35,14 @@ export const Hero = () => {
                             {t('badge')}
                         </h2>
                     </div>
+
+                    {visitorCount && (
+                        <div className="flex items-center gap-2 text-xs md:text-sm text-cyber-primary/80 font-mono bg-black/40 px-3 py-1 rounded border border-cyber-primary/20">
+                            <span>(Você foi o</span>
+                            <CountUp to={visitorCount} className="font-bold text-cyber-secondary" />
+                            <span>ao entrar neste portfólio! Obrigado pela visita :)</span>
+                        </div>
+                    )}
 
                     <p className="text-lg text-gray-400 max-w-lg leading-relaxed">
                         {t('description')}
@@ -53,13 +69,13 @@ export const Hero = () => {
                         </button>
                         <Link
                             href={`/${currentLocale}/articles`}
-                            className="bg-transparent border border-white text-white px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-white/10"
+                            className="bg-transparent border border-white text-white px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-white/10 md:hidden"
                         >
                             {t('cta_articles')}
                         </Link>
                         <Link
                             href={`/${currentLocale}/ia-content`}
-                            className="bg-transparent border border-white text-white px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-white/10"
+                            className="bg-transparent border border-white text-white px-8 py-3 font-bold rounded hover:scale-105 transition-all cursor-pointer hover:bg-white/10 md:hidden"
                         >
                             {t('cta_ia_content')}
                         </Link>

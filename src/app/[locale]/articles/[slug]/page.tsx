@@ -1,6 +1,6 @@
-import { client } from '@/sanity/client';
+// import { client } from '@/sanity/client';
 import { notFound } from 'next/navigation';
-import { PortableText } from 'next-sanity';
+// import { PortableText } from 'next-sanity';
 
 export default async function DynamicArticlePage({
     params
@@ -18,8 +18,10 @@ export default async function DynamicArticlePage({
         // So we focus on Sanity articles here.
     }
 
-    const query = `*[_type == "article" && slug.current == $slug][0]`;
-    const article = await client.fetch(query, { slug });
+    // TODO: Payload Migration
+    // const query = `*[_type == "article" && slug.current == $slug][0]`;
+    // const article = await client.fetch(query, { slug });
+    const article = { title: "Migrating...", publishedAt: new Date().toISOString(), body: [] };
 
     if (!article) {
         notFound();
@@ -36,16 +38,19 @@ export default async function DynamicArticlePage({
             </div>
 
             <div className="text-gray-300">
-                <PortableText value={article.body} />
+                <p>Content is migrating to Payload CMS...</p>
+                {/* <PortableText value={article.body} /> */}
             </div>
         </article>
     );
 }
 
 export async function generateStaticParams() {
-    const query = `*[_type == "article"] { "slug": slug.current }`;
-    const articles = await client.fetch(query);
-    return articles.map((article: any) => ({
-        slug: article.slug
-    }));
+    // TODO: Payload Migration
+    // const query = `*[_type == "article"] { "slug": slug.current }`;
+    // const articles = await client.fetch(query);
+    // return articles.map((article: any) => ({
+    //    slug: article.slug
+    // }));
+    return [];
 }

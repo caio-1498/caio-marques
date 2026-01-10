@@ -2,7 +2,7 @@ import PillNav from '@/components/PillNav';
 import ArticlesView from '@/components/ArticlesView';
 import React from 'react';
 import ParticlesBackground from '@/components/ui/ParticlesBackground';
-import { client } from "@/sanity/client";
+// import { client } from "@/sanity/client";
 
 export default async function IAIntegrationsLayout({
     children,
@@ -13,12 +13,14 @@ export default async function IAIntegrationsLayout({
 }) {
     const { locale } = await params;
 
-    const query = `*[_type == "iaContent"] | order(publishedAt desc) {
-        title,
-        "slug": slug.current,
-        publishedAt
-    }`;
-    const iaContents = await client.fetch(query);
+    // TODO: Payload Migration
+    // const query = `*[_type == "iaContent"] | order(publishedAt desc) {
+    //     title,
+    //     "slug": slug.current,
+    //     publishedAt
+    // }`;
+    // const iaContents = await client.fetch(query);
+    const iaContents: any[] = [];
 
     const navItems = [
         { label: 'Articles', href: `/${locale}/articles` },

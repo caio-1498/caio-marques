@@ -60,40 +60,44 @@ export const Navigation = () => {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="fixed top-0 left-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-border/50"
         >
-            <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-                <Link href={`/${currentLocale}`} className="text-2xl font-bold tracking-tighter text-white group">
-                    <span className="text-cyber-primary group-hover:text-cyber-secondary transition-colors">&lt;</span>
-                    CM
-                    <span className="text-cyber-primary group-hover:text-cyber-secondary transition-colors">/&gt;</span>
-                </Link>
+            <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
+                {/* Logo - Mobile Only */}
+                <div className="md:hidden">
+                    <Link href={`/${currentLocale}`} className="text-2xl font-bold tracking-tighter text-white group">
+                        <span className="text-cyber-primary group-hover:text-cyber-secondary transition-colors">&lt;</span>
+                        CM
+                        <span className="text-cyber-primary group-hover:text-cyber-secondary transition-colors">/&gt;</span>
+                    </Link>
+                </div>
 
-                <div className="flex items-center gap-8">
-                    <div className="hidden md:flex gap-8">
-                        <Link href={`/${currentLocale}`} className="text-sm font-mono text-gray-400 hover:text-cyber-primary transition-colors uppercase tracking-widest cursor-pointer">
-                            {t('home')}
-                        </Link>
-                        {/* Placeholder for Articles - creating route next */}
-                        {/* Disabled Links with Tooltip */}
-                        <div className="group relative flex items-center">
-                            <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
-                                {t('articles')}
-                            </span>
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
-                                {t('coming_soon')}
-                            </span>
-                        </div>
+                {/* Desktop Navigation - Absolute Centered */}
+                <div className="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+                    <Link href={`/${currentLocale}`} className="text-sm font-mono text-gray-400 hover:text-cyber-primary transition-colors uppercase tracking-widest cursor-pointer">
+                        {t('home')}
+                    </Link>
 
-                        <div className="group relative flex items-center">
-                            <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
-                                {t('ia_content')}
-                            </span>
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
-                                {t('coming_soon')}
-                            </span>
-                        </div>
+                    {/* Disabled Links with Tooltip */}
+                    <div className="group relative flex items-center">
+                        <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
+                            {t('articles')}
+                        </span>
+                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
+                            {t('coming_soon')}
+                        </span>
                     </div>
 
-                    <div className="h-4 w-px bg-cyber-border hidden md:block" />
+                    <div className="group relative flex items-center">
+                        <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
+                            {t('ia_content')}
+                        </span>
+                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
+                            {t('coming_soon')}
+                        </span>
+                    </div>
+                </div>
+
+                <div className="flex items-center gap-8 w-full md:w-auto justify-end">
+
 
                     <div className="flex gap-1 font-mono text-xs">
                         <button
