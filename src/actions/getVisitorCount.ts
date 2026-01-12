@@ -21,7 +21,7 @@ export async function getVisitorCount() {
 
     // Initialize if needed (handling case where global might be empty initially)
     let visitorCount = stats.visitorCount || 0;
-    const startCount = stats.startCount || 18;
+    const startCount = stats.startCount || 2;
     // Ensure ips is treated as an array
     const currentIps = Array.isArray(stats.ips) ? (stats.ips as string[]) : [];
 
@@ -41,6 +41,6 @@ export async function getVisitorCount() {
   } catch (error) {
     console.error('Error tracking visitor:', error);
     // Fallback similar to previous implementation, but respecting the requested start number
-    return 18;
+    return 2;
   }
 }

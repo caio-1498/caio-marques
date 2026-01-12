@@ -10,7 +10,7 @@ export const Statistics: GlobalConfig = {
     {
       name: 'startCount',
       type: 'number',
-      defaultValue: 18,
+      defaultValue: 2,
       required: true,
       admin: {
         description: 'The starting number for the visitor counter',

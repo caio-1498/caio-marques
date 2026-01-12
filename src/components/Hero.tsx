@@ -36,11 +36,23 @@ export const Hero = () => {
                         </h2>
                     </div>
 
-                    {visitorCount && (
+                    {visitorCount !== null ? (
                         <div className="flex items-center gap-2 text-xs md:text-sm text-cyber-primary/80 font-mono bg-black/40 px-3 py-1 rounded border border-cyber-primary/20">
                             <span>(Você foi o</span>
                             <CountUp to={visitorCount} className="font-bold text-cyber-secondary" />
                             <span>ao entrar neste portfólio! Obrigado pela visita :)</span>
+                        </div>
+                    ) : (
+                        <div className="flex items-center gap-2 text-xs md:text-sm text-cyber-primary/80 font-mono bg-black/40 px-3 py-1 rounded border border-cyber-primary/20">
+                            <span>Carregando visita...</span>
+                            <div className="w-24 h-2 bg-cyber-primary/10 rounded-full overflow-hidden relative">
+                                <motion.div
+                                    className="absolute inset-y-0 left-0 bg-cyber-primary/50"
+                                    initial={{ width: "0%" }}
+                                    animate={{ width: "100%" }}
+                                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                                />
+                            </div>
                         </div>
                     )}
 
