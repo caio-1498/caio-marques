@@ -8,6 +8,7 @@ import { Media } from './src/payload/collections/Media'
 import { Projects } from './src/payload/collections/Projects'
 import { Experiences } from './src/payload/collections/Experiences'
 import { Users } from './src/payload/collections/Users'
+import { Statistics } from './src/payload/globals/Statistics'
 import sharp from 'sharp'
 
 const filename = fileURLToPath(import.meta.url)
@@ -18,6 +19,7 @@ export default buildConfig({
     user: 'users',
   },
   collections: [Users, Media, Projects, Experiences],
+  globals: [Statistics],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'YOUR_SECRET_HERE', // TODO: user should set this
   db: postgresAdapter({
