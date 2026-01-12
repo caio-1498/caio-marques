@@ -81,7 +81,7 @@ export const Navigation = () => {
                         <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
                             {t('articles')}
                         </span>
-                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
+                        <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
                             {t('coming_soon')}
                         </span>
                     </div>
@@ -90,7 +90,7 @@ export const Navigation = () => {
                         <span className="text-sm font-mono text-gray-600 cursor-not-allowed uppercase tracking-widest relative z-10 transition-colors">
                             {t('ia_content')}
                         </span>
-                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
+                        <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-2 py-1 bg-cyber-primary/20 border border-cyber-primary/50 text-cyber-primary text-[10px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-md">
                             {t('coming_soon')}
                         </span>
                     </div>

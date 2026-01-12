@@ -49,13 +49,7 @@ export const Stack = () => {
                         </div>
                     </SpotlightCard>
 
-                    <SpotlightCard className="md:col-span-2">
-                        <div className="flex flex-col h-full">
-                            <Database className="w-10 h-10 text-orange-400 mb-6" />
-                            <h3 className="text-xl font-bold mb-2 text-white">Payload CMS</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">Building structured content platforms with Payload 3.0. Native Next.js architecture, Postgres database, and customizable content studios.</p>
-                        </div>
-                    </SpotlightCard>
+
                 </div>
             </div>
         </section>

@@ -19,7 +19,7 @@
     "greeting": "Hello, I am",
     "name": "Caio Marques",
     "role": "Mid-Level Software Engineer",
-    "badge": "Mid-level Developer | Specialization in frontend and AI functionalities",
+    "badge": "Mid-level Developer | UI/UX Designer | Specialization in frontend and AI functionalities",
     "description": "I build digital experiences that blend high-performance engineering with immersive aesthetics. Turning complex problems into elegant, user-centric solutions.",
     "cta_projects": "View Projects",
     "cta_stacks": "Stacks",
@@ -29,7 +29,7 @@
   },
   "Stack": {
     "title": "Core Architecture",
-    "subtitle": "High-Performance Technologies"
+    "subtitle": "Technologies"
   },
   "Projects": {
     "title": "Mission Logs",
