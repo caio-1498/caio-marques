@@ -25,11 +25,26 @@
     "cta_stacks": "Stacks",
     "cta_contact": "Contact Me",
     "cta_articles": "Articles",
-    "cta_ia_content": "AI Content"
+    "cta_ia_content": "AI Content",
+    "status": "Available",
+    "visitor_loading": "Loading visitor count...",
+    "visitor_prefix": "(You are the",
+    "visitor_suffix": "to enter this portfolio! Thanks for visiting :)"
+  },
+  "Footer": {
+    "copyright": "All systems nominal."
   },
   "Stack": {
     "title": "Core Architecture",
-    "subtitle": "Technologies"
+    "subtitle": "Technologies",
+    "react_next_title": "React & Next.js",
+    "react_next_desc": "Expertise in App Router, Server Components (RSC), and creating accessible, high-performance user interfaces.",
+    "genai_title": "GenAI & LLMs",
+    "genai_desc": "Specialized in Google Gemini Pro integration, function calling, and building context-aware AI agents.",
+    "dotnet_title": ".NET & Node.js",
+    "dotnet_desc": "Architecting scalable REST APIs with NestJS or .NET. Deep understanding of Microservices and Design Patterns.",
+    "angular_title": "Angular",
+    "angular_desc": "Deep knowledge of Dependency Injection, RxJS streams, and enterprise-scale modular architecture."
   },
   "Projects": {
     "title": "Mission Logs",

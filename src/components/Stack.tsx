@@ -20,32 +20,32 @@ export const Stack = () => {
                     <SpotlightCard className="col-span-1 md:col-span-2 lg:col-span-1">
                         <div className="flex flex-col h-full">
                             <Code2 className="w-10 h-10 text-cyber-primary mb-6" />
-                            <h3 className="text-xl font-bold mb-2 text-white">React & Next.js</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">Expertise in App Router, Server Components (RSC), and creating accessible, high-performance user interfaces.</p>
+                            <h3 className="text-xl font-bold mb-2 text-white">{t('react_next_title')}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{t('react_next_desc')}</p>
                         </div>
                     </SpotlightCard>
 
                     <SpotlightCard>
                         <div className="flex flex-col h-full">
                             <Brain className="w-10 h-10 text-cyber-secondary mb-6" />
-                            <h3 className="text-xl font-bold mb-2 text-white">GenAI & LLMs</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">Specialized in Google Gemini Pro integration, function calling, and building context-aware AI agents.</p>
+                            <h3 className="text-xl font-bold mb-2 text-white">{t('genai_title')}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{t('genai_desc')}</p>
                         </div>
                     </SpotlightCard>
 
                     <SpotlightCard>
                         <div className="flex flex-col h-full">
                             <Server className="w-10 h-10 text-cyber-accent mb-6" />
-                            <h3 className="text-xl font-bold mb-2 text-white">.NET & Node.js</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">Architecting scalable REST APIs with NestJS or .NET. Deep understanding of Microservices and Design Patterns.</p>
+                            <h3 className="text-xl font-bold mb-2 text-white">{t('dotnet_title')}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{t('dotnet_desc')}</p>
                         </div>
                     </SpotlightCard>
 
                     <SpotlightCard>
                         <div className="flex flex-col h-full">
                             <Globe className="w-10 h-10 text-blue-400 mb-6" />
-                            <h3 className="text-xl font-bold mb-2 text-white">Angular</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">Deep knowledge of Dependency Injection, RxJS streams, and enterprise-scale modular architecture.</p>
+                            <h3 className="text-xl font-bold mb-2 text-white">{t('angular_title')}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{t('angular_desc')}</p>
                         </div>
                     </SpotlightCard>
 

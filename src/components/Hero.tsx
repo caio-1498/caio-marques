@@ -38,13 +38,13 @@ export const Hero = () => {
 
                     {visitorCount !== null ? (
                         <div className="flex items-center gap-2 text-xs md:text-sm text-cyber-primary/80 font-mono bg-black/40 px-3 py-1 rounded border border-cyber-primary/20">
-                            <span>(Você foi o</span>
+                            <span>{t('visitor_prefix')}</span>
                             <CountUp to={visitorCount} className="font-bold text-cyber-secondary" />
-                            <span>ao entrar neste portfólio! Obrigado pela visita :)</span>
+                            <span>{t('visitor_suffix')}</span>
                         </div>
                     ) : (
                         <div className="flex items-center gap-2 text-xs md:text-sm text-cyber-primary/80 font-mono bg-black/40 px-3 py-1 rounded border border-cyber-primary/20">
-                            <span>Carregando visita...</span>
+                            <span>{t('visitor_loading')}</span>
                             <div className="w-24 h-2 bg-cyber-primary/10 rounded-full overflow-hidden relative">
                                 <motion.div
                                     className="absolute inset-y-0 left-0 bg-cyber-primary/50"
@@ -105,7 +105,7 @@ export const Hero = () => {
                         name={t('name')}
                         title={t('role')}
                         handle="dev.psy"
-                        status="Available"
+                        status={t('status')}
                         avatarUrl="/images/profile-caio.png"
                     />
                 </motion.div>
